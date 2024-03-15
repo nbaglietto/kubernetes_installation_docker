@@ -58,7 +58,7 @@ EOF
 sudo sysctl --system
 
 # Inicializar el clúster (en el servidor maestro de Kube)
-sudo kubeadm init --apiserver-advertise-address=192.168.1.180 --cri-socket unix:///var/run/cri-dockerd.sock --pod-network-cidr=192.168.0.0/16
+sudo kubeadm init --apiserver-advertise-address=192.168.1.180 --cri-socket unix:///var/run/cri-dockerd.sock --pod-network-cidr=10.6.1.0/16
 
 # Configurar el acceso al clúster para el usuario actual
 mkdir -p $HOME/.kube
